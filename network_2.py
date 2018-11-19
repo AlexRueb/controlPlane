@@ -142,6 +142,8 @@ class Router:
         self.cost_D = cost_D    # {neighbor: {interface: cost}}
         #TODO: set up the routing table for connected hosts
         self.rt_tbl_D = {}      # {destination: {router: cost}}
+        print(self.rt_tbl_D)
+        #self.rt_tbl_D[cost_D[0]] = {}
         print('%s: Initialized routing table' % self)
         self.print_routes()
     
