@@ -151,7 +151,16 @@ class Router:
     ## Print routing table
     def print_routes(self):
         #TODO: print the routes as a two dimensional table
-        print(self.rt_tbl_D)
+        #print(self.rt_tbl_D)
+        print ("=====================")
+        headerVar = self.name + " | "
+        l1 = self.name + " | "
+        for name,cost in self.cost_D.items():
+            headerVar += name + " | "
+            tempStr = str(cost.values().__iter__().__next__())
+            l1 += tempStr + " | "
+            pass
+        print (headerVar + '\n' + l1)
 
 
     ## called when printing the object
